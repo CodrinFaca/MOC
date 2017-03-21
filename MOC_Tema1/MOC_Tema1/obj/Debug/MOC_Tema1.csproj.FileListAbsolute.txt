@@ -18,3 +18,13 @@ D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\TestFunctions.pdb
 D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.csprojResolveAssemblyReference.cache
 D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.exe
 D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.pdb
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\MOC_Tema1.exe.config
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\MOC_Tema1.exe
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\MOC_Tema1.pdb
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\BinaryRepresentation.dll
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\TestFunctions.dll
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\BinaryRepresentation.pdb
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\TestFunctions.pdb
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.csprojResolveAssemblyReference.cache
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.exe
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.pdb

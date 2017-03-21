@@ -8,49 +8,58 @@ using TestFunctions;
 
 namespace MOC_Tema1
 {
-  public class HillClimbing
-  {
-    private BinaryRepresentationOfFloat MaxCurrentValue;
-    private double BestValue;
-    private ITestFunction function;
-    public HillClimbing(ITestFunction function)
+    public class HillClimbing
     {
-      //get starting number:
-      MaxCurrentValue = function.GetBinaryNumber();
-      BestValue = function.getValueOfFitnessFunction();
-      this.function = function;
-
-    }
-
-    public double GetBestValue()
-    {
-      bool noMoreSolutions = false;
-      double currentBestScoreValue = BestValue;
-      BinaryRepresentationOfFloat currentBestValue = MaxCurrentValue;
-
-      while (!noMoreSolutions)
-      {
-        noMoreSolutions = true;
-        //construct neighbourhood
-        var neighbourhood = currentBestValue.GetNeighbourhood();
-        //get best solution of neightbourhood
-       
-        foreach (var neighbour in neighbourhood)
+        private List<BinaryRepresentationOfFloat> MaxCurrentValue;
+        private double BestValue;
+        private ITestFunction function;
+        public HillClimbing(ITestFunction function)
         {
-          function.SetBinaryNumber(neighbour);
-          var fitnessOfCurrent = function.getValueOfFitnessFunction();
-          if (fitnessOfCurrent > currentBestScoreValue)
-          {
-            //new best
-            currentBestValue = neighbour;
-            currentBestScoreValue = fitnessOfCurrent;
-            //continue search
-            noMoreSolutions = false;
-          }
-        }
-      }
+            //get starting number:
+            MaxCurrentValue = function.GetBinaryNumber();
+            BestValue = function.getValueOfFitnessFunction();
+            this.function = function;
 
-      return currentBestValue.ConvertToDouble();
+        }
+
+        public List<double> GetBestValue()
+        {
+            List<BinaryRepresentationOfFloat> currentBestValue = MaxCurrentValue;
+            //iterate through each value in array  and improve it as much as possible
+            var index = 0;
+            foreach (var item in function.GetBinaryNumber().ToList())
+            {
+                bool noMoreSolutions = false;
+
+                BinaryRepresentationOfFloat currentBesetVal = null;
+                double currentBestScoreValue = BestValue;
+
+                while (!noMoreSolutions)
+                {
+                    noMoreSolutions = true;
+                    //construct neighbourhood
+                    var neighbourhood = item.GetNeighbourhood();
+                    //get best solution of neightbourhood
+
+                    foreach (var neighbour in neighbourhood)
+                    {
+                        function.SetBinaryNumber(neighbour, index);
+                        var fitnessOfCurrent = function.getValueOfFitnessFunction();
+                        if (fitnessOfCurrent > currentBestScoreValue)
+                        {
+                            //new best
+                            currentBesetVal = neighbour;
+                            currentBestScoreValue = fitnessOfCurrent;
+                            //continue search
+                            noMoreSolutions = false;
+                        }
+                    }
+                }
+                currentBestValue[index] = currentBesetVal;
+                index++;
+            }
+            
+            return currentBestValue.Select(x => x.ConvertToDouble()).ToList();
+        }
     }
-  }
 }

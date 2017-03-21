@@ -8,3 +8,8 @@ D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\BinaryRepresentation\bin\Debug\BinaryR
 D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\BinaryRepresentation\obj\Debug\BinaryRepresentation.csprojResolveAssemblyReference.cache
 D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\BinaryRepresentation\obj\Debug\BinaryRepresentation.dll
 D:\Lucru\Facultate\Master 1\MOC\MOC_Tema1\BinaryRepresentation\obj\Debug\BinaryRepresentation.pdb
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\BinaryRepresentation\bin\Debug\BinaryRepresentation.dll
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\BinaryRepresentation\bin\Debug\BinaryRepresentation.pdb
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\BinaryRepresentation\obj\Debug\BinaryRepresentation.csprojResolveAssemblyReference.cache
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\BinaryRepresentation\obj\Debug\BinaryRepresentation.dll
+D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\BinaryRepresentation\obj\Debug\BinaryRepresentation.pdb

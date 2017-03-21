@@ -152,17 +152,17 @@ namespace MOC_Tema1
         private void Evaluation()
         {
             int i = 0;
-            foreach (var item in _populationList)
-            {
-                //calculate fitness of item
-                _testFunction.SetBinaryNumber(item);
-                var fitness = _testFunction.getValueOfFitnessFunction();
-                _scoreList[i] = fitness;
+            //foreach (var item in _populationList)
+            //{
+            //    //calculate fitness of item
+            //    _testFunction.SetBinaryNumber(item);
+            //    var fitness = _testFunction.getValueOfFitnessFunction();
+            //    _scoreList[i] = fitness;
 
-                _totalFitness += fitness;
-                _survivalProbability.Add(_totalFitness);
-                i++;
-            }
+            //    _totalFitness += fitness;
+            //    _survivalProbability.Add(_totalFitness);
+            //    i++;
+            //}
         }
 
         private void Initialize()

@@ -10,8 +10,8 @@ namespace TestFunctions
     {
 
     double getValueOfFitnessFunction();
-    BinaryRepresentation.BinaryRepresentationOfFloat GetBinaryNumber();
-    void SetBinaryNumber(BinaryRepresentation.BinaryRepresentationOfFloat number);
+    List<BinaryRepresentation.BinaryRepresentationOfFloat> GetBinaryNumber();
+    void SetBinaryNumber(BinaryRepresentation.BinaryRepresentationOfFloat number, int index);
 
     int GetNumberOfBits();
 
