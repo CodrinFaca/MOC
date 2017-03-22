@@ -39,7 +39,7 @@ namespace TestFunctions
         }
         public double getValueOfFitnessFunction()
         {
-            double result = _A * _n;
+            double result = _A * Values.Count;
             //f6(x) = 10·n + sum(x(i) ^ 2 - 10·cos(2·pi·x(i))), i = 1:n; -5.12 <= x(i) <= 5.12.
             //we can say that x(i) is our current _number
             double sum = 0;

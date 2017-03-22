@@ -28,3 +28,13 @@ D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\TestFunctions.
 D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.csprojResolveAssemblyReference.cache
 D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.exe
 D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\MOC_Tema1.exe.config
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.exe
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\MOC_Tema1.exe
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\MOC_Tema1.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\BinaryRepresentation.dll
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\TestFunctions.dll
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\BinaryRepresentation.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\bin\Debug\TestFunctions.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1\obj\Debug\MOC_Tema1.csprojResolveAssemblyReference.cache

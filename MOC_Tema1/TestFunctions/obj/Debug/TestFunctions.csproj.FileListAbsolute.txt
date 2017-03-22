@@ -19,3 +19,10 @@ D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\TestFunctions\bin\Debug\BinaryRepr
 D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\TestFunctions\obj\Debug\TestFunctions.csprojResolveAssemblyReference.cache
 D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\TestFunctions\obj\Debug\TestFunctions.dll
 D:\Lucru\Facultate\Master 1\MOC\MOC\MOC_Tema1\TestFunctions\obj\Debug\TestFunctions.pdb
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\bin\Debug\TestFunctions.dll
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\bin\Debug\TestFunctions.pdb
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\bin\Debug\BinaryRepresentation.dll
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\bin\Debug\BinaryRepresentation.pdb
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\obj\Debug\TestFunctions.csprojResolveAssemblyReference.cache
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\obj\Debug\TestFunctions.dll
+E:\Temp stuff\MOC\MOC_Tema1\TestFunctions\obj\Debug\TestFunctions.pdb
