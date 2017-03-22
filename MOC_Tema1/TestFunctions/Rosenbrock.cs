@@ -78,5 +78,10 @@ namespace TestFunctions
         {
             return new Tuple<double, double>(_lowerLimit, _upperLimit);
         }
+
+        public int getDimensions()
+        {
+            return _d;
+        }
     }
 }

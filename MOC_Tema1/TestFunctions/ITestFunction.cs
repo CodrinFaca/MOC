@@ -16,5 +16,6 @@ namespace TestFunctions
     int GetNumberOfBits();
 
     Tuple<double, double> GetLowerUpperBounds();
+        int getDimensions();
     }
 }

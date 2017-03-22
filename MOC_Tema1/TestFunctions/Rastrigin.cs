@@ -8,7 +8,7 @@ namespace TestFunctions
     {
         private double _lowerLimit = -5.12;
         private double _upperLimit = 5.12;
-        private double _A = 10;
+        private int _A = 10;
         private double E = 0.001;
         private int _numberOfBits;
         //public BinaryRepresentationOfFloat _number { get; set; }
@@ -69,6 +69,11 @@ namespace TestFunctions
         public Tuple<double, double> GetLowerUpperBounds()
         {
             return new Tuple<double, double>(_lowerLimit, _upperLimit);
+        }
+
+        public int getDimensions()
+        {
+            return _A;
         }
     }
 }
