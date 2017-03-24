@@ -14,6 +14,8 @@ namespace MOC_Tema1_1
         //bazinele de atractie
         private double[] firstImprovement = new double[32];
         private double[] bestImprovement = new double[32];
+        private Dictionary<double, List<int>> bestImprovementDictionary = new Dictionary<double, List<int>>();
+        private Dictionary<double, List<int>> firstImprovementDictionary = new Dictionary<double, List<int>>();
         private BinaryRepresentation[] numbers = new BinaryRepresentation[32];
 
         private double TestFunction(BinaryRepresentation number)
@@ -47,7 +49,6 @@ namespace MOC_Tema1_1
             //initialize
             double bestScore;
             int bestIndex = -1;
-
             //iteration to pass through all numbers
             while (true)
             {
@@ -78,25 +79,48 @@ namespace MOC_Tema1_1
                             bestScore = functionValue;
                             bestIndex = (int)neighbour.ConvertToDouble();
                             canClimb = true;
+                            currentNumber = neighbour;
                         }
                     }
-                    Console.WriteLine("improvement: " + bestIndex);
+                    //Console.WriteLine("improvement: " + bestIndex);
                 }
                 //mark all in the same pool
                 foreach (var index in samePool)
                 {
-                    bestImprovement[index] = bestScore;
+                    if (bestImprovement[index] <= bestScore)
+                    {
+                        bestImprovement[index] = bestScore;
+                    }
                 }
+                if (!bestImprovementDictionary.ContainsKey(bestScore))
+                {
+                    bestImprovementDictionary.Add(bestScore, samePool);
+                }
+                else
+                {
+                    bestImprovementDictionary[bestScore].AddRange(samePool);
+                }
+                bestImprovementDictionary[bestScore].Insert(0,samePool.Last());
+
             }
             Print();
         }
 
         private void Print(bool isBestImprovement = true)
         {
-            var testArray = isBestImprovement ? bestImprovement : firstImprovement;
-            for (int i = 0; i < 32; i++)
+            Console.WriteLine(isBestImprovement ? "Best improvement results" : "First improvement results");
+            //var testArray = isBestImprovement ? bestImprovement : firstImprovement;
+            //for (int i = 0; i < 32; i++)
+            //{
+            //    Console.WriteLine($"{i} has final value: {testArray[i]}");
+            //}
+            var testDictionary = isBestImprovement ? bestImprovementDictionary : firstImprovementDictionary;
+            foreach (var kvp in testDictionary)
             {
-                Console.WriteLine($"{i} has final value: {testArray[i]}");
+                //var numbers = kvp.Value.Distinct().ToList();
+                var numbersString = string.Join(",", kvp.Value.Distinct().Select(x => x.ToString()));
+                Console.WriteLine($"Pool with max: {kvp.Key} contains the following numbers: {numbersString}");
+
             }
         }
 
@@ -129,7 +153,66 @@ namespace MOC_Tema1_1
 
         public void FirstImprovement()
         {
-            
+            //reset values 
+
+            //initialize
+            double bestScore;
+            int bestIndex = -1;
+            //iteration to pass through all numbers
+            while (true)
+            {
+                List<int> samePool = new List<int>();
+                int startIndexValue = ComputeFirstUncheckedNumber(false);
+                if (startIndexValue == -1)
+                {
+                    break;
+                }
+                bool canClimb = true;
+                bestScore = TestFunction(numbers[startIndexValue]);
+                bestIndex = startIndexValue;
+                //do Hillclimbing
+                BinaryRepresentation currentNumber = numbers[startIndexValue];
+                while (canClimb)
+                {
+                    List<BinaryRepresentation> neighbours = GetNeighbours(currentNumber);
+                    //bestScore = TestFunction(numbers[startIndexValue]);
+                    //bestIndex = startIndexValue;
+                    samePool.Add(bestIndex);
+
+                    canClimb = false;
+                    foreach (var neighbour in neighbours)
+                    {
+                        var functionValue = TestFunction(neighbour);
+                        if (functionValue > bestScore)
+                        {
+                            bestScore = functionValue;
+                            bestIndex = (int)neighbour.ConvertToDouble();
+                            canClimb = true;
+                            currentNumber = neighbour;
+                            break;
+                        }
+                    }
+                }
+                //mark all in the same pool
+                foreach (var index in samePool)
+                {
+                    if (firstImprovement[index] <= bestScore)
+                    {
+                        firstImprovement[index] = bestScore;
+                    }
+                }
+                if (!firstImprovementDictionary.ContainsKey(bestScore))
+                {
+                    firstImprovementDictionary.Add(bestScore, samePool);
+                }
+                else
+                {
+                    firstImprovementDictionary[bestScore].AddRange(samePool);
+                }
+                bestImprovementDictionary[bestScore].Insert(0, samePool.Last());
+
+            }
+            Print(false);
         }
 
     }

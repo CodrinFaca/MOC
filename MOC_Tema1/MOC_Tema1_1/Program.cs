@@ -14,6 +14,7 @@ namespace MOC_Tema1_1
             HillClimbing hc = new HillClimbing();
             hc.Fill();
             hc.BestImprovement();
+            hc.FirstImprovement();
 
             Console.ReadKey();
         }
