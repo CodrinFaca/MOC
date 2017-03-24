@@ -1,1 +1,8 @@
 E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\bin\Debug\MOC_Tema1_1.exe.config
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\bin\Debug\MOC_Tema1_1.exe
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\bin\Debug\MOC_Tema1_1.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\bin\Debug\BinaryRepresentation.dll
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\bin\Debug\BinaryRepresentation.pdb
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\obj\Debug\MOC_Tema1_1.csprojResolveAssemblyReference.cache
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\obj\Debug\MOC_Tema1_1.exe
+E:\Temp stuff\MOC\MOC_Tema1\MOC_Tema1_1\obj\Debug\MOC_Tema1_1.pdb

@@ -11,6 +11,11 @@ namespace MOC_Tema1_1
         static void Main(string[] args)
         {
 
+            HillClimbing hc = new HillClimbing();
+            hc.Fill();
+            hc.BestImprovement();
+
+            Console.ReadKey();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace MOC_Tema1_1
         //bazinele de atractie
         private double[] firstImprovement = new double[32];
         private double[] bestImprovement = new double[32];
+        private BinaryRepresentation[] numbers = new BinaryRepresentation[32];
 
         private double TestFunction(BinaryRepresentation number)
         {
@@ -31,10 +32,99 @@ namespace MOC_Tema1_1
             return sum;
         }
 
+        public void Fill()
+        {
+            for (int i = 0; i < 32; i++)
+            {
+               var arr = new BitArray(BitConverter.GetBytes(i));
+               var b = new BinaryRepresentation(arr);
+                numbers[i] = b;
+            }
+        }
 
         public void BestImprovement()
         {
-            
+            //initialize
+            double bestScore;
+            int bestIndex = -1;
+
+            //iteration to pass through all numbers
+            while (true)
+            {
+                List<int> samePool = new List<int>();
+                int startIndexValue = ComputeFirstUncheckedNumber();
+                if (startIndexValue == -1)
+                {
+                    break;
+                }
+                bool canClimb = true;
+                bestScore = TestFunction(numbers[startIndexValue]);
+                bestIndex = startIndexValue;
+                //do Hillclimbing
+                BinaryRepresentation currentNumber = numbers[startIndexValue];
+                while (canClimb)
+                {
+                    List<BinaryRepresentation> neighbours = GetNeighbours(currentNumber);
+                    //bestScore = TestFunction(numbers[startIndexValue]);
+                    //bestIndex = startIndexValue;
+                    samePool.Add(bestIndex);
+
+                    canClimb = false;
+                    foreach (var neighbour in neighbours)
+                    {
+                        var functionValue = TestFunction(neighbour);
+                        if (functionValue > bestScore)
+                        {
+                            bestScore = functionValue;
+                            bestIndex = (int)neighbour.ConvertToDouble();
+                            canClimb = true;
+                        }
+                    }
+                    Console.WriteLine("improvement: " + bestIndex);
+                }
+                //mark all in the same pool
+                foreach (var index in samePool)
+                {
+                    bestImprovement[index] = bestScore;
+                }
+            }
+            Print();
+        }
+
+        private void Print(bool isBestImprovement = true)
+        {
+            var testArray = isBestImprovement ? bestImprovement : firstImprovement;
+            for (int i = 0; i < 32; i++)
+            {
+                Console.WriteLine($"{i} has final value: {testArray[i]}");
+            }
+        }
+
+        private List<BinaryRepresentation> GetNeighbours(BinaryRepresentation d)
+        {
+            List <BinaryRepresentation> result = new List<BinaryRepresentation>();
+            for (int i = 0; i < 5; i++)
+            {
+                result.Add(d.GetNewByFlipping(i));
+            }
+            return result;
+        }
+
+
+        /// <summary>
+        /// If paramenter is false, use First Improvement
+        /// </summary>
+        /// <param name="isBestImprovement"></param>
+        /// <returns></returns>
+        private int ComputeFirstUncheckedNumber(bool isBestImprovement = true)
+        {
+            var testArray = isBestImprovement ? bestImprovement : firstImprovement;
+            for (int i = 0; i < 32; i++)
+            {
+                if (testArray[i] == 0)
+                    return i;
+            }
+            return -1;
         }
 
         public void FirstImprovement()
@@ -56,6 +146,26 @@ namespace MOC_Tema1_1
             {
                 _numberBitArray[i] = source[i];
             }
+        }
+
+        public BinaryRepresentation GetNewByFlipping(int index)
+        {
+            if (index < 0 || index > 4)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            var newVal = new BinaryRepresentation(_numberBitArray);
+            newVal.FipBit(index);
+            return newVal;
+        }
+
+        public void FipBit(int index)
+        {
+            if (index < 0 || index > 4)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            _numberBitArray[index] = !_numberBitArray[index];
         }
 
         public double ConvertToDouble()
