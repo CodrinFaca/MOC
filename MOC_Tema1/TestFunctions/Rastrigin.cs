@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace TestFunctions
 {
+
     public class Rastrigin : ITestFunction
     {
         private double _lowerLimit = -5.12;
